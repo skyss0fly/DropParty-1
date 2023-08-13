@@ -1,12 +1,12 @@
 <?php
 
-namespace provsalt\dropparty\task;
+namespace skyss0fly\DropParty\task;
 
 use pocketmine\scheduler\Task;
 use pocketmine\item\Item;
 use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
-use provsalt\dropparty\DropParty;
+use skyss0fly\DropParty\DropParty;
 
 class DropItemsTask extends Task {
 	

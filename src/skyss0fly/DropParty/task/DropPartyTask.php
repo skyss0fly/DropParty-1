@@ -1,9 +1,9 @@
 <?php
 
-namespace provsalt\dropparty\task;
+namespace skyss0fly\DropParty\task;
 
 use pocketmine\scheduler\Task;
-use provsalt\dropparty\DropParty;
+use skyss0fly\DropParty\DropParty;
 use pocketmine\item\Item;
 use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
