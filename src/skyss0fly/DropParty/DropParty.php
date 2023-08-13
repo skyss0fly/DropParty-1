@@ -7,7 +7,7 @@ use skyss0fly\DropParty\task\DropItemsTask;
 use skyss0fly\DropParty\task\DropPartyTask;
 use pocketmine\utils\Config;
 use pocketmine\scheduler\TaskScheduler;
-use pocketmine\level\Level;
+use pocketmine\world\WorldManager;
 use pocketmine\Server;
 
 class DropParty extends PluginBase {
@@ -29,7 +29,7 @@ class DropParty extends PluginBase {
 		
 
 		$this->time = $this->cfg["Time"];
-		$level = $this->getServer()->getLevelByName($this->cfg["World"]);
+		$level = $this->getWorldManager()->getWorldByName($this->cfg["World"]);
 		if ($level !== null) {
 			$level->loadChunk($this->cfg["Coordinates"]["X"], $this->cfg["Coordinates"]["Z"]);
 			$this->getScheduler()->scheduleRepeatingTask(new task\DropPartyTask($this), 20 * 60);
