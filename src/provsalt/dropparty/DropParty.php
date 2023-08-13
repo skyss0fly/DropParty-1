@@ -1,10 +1,10 @@
 <?php
 
-namespace provsalt\dropparty;
+namespace skyss0fly\DropParty;
 
 use pocketmine\plugin\PluginBase;
-use provsalt\dropparty\task\DropItemsTask;
-use provsalt\dropparty\task\DropPartyTask;
+use skyss0fly\DropParty\task\DropItemsTask;
+use skyss0fly\DropParty\task\DropPartyTask;
 use pocketmine\utils\Config;
 use pocketmine\scheduler\TaskScheduler;
 use pocketmine\level\Level;
@@ -19,7 +19,7 @@ class DropParty extends PluginBase {
 	public $config;
 	public $cfg;
 	
-	public function onEnable() {
+	public function onEnable():void {
 
 		$this->saveResource("config.yml");
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
